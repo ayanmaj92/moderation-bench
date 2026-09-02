@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.eggs/
+dist/
+build/
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Outputs and results (whole tree, any depth -- e.g. outputs_instruction-driven/<subset>/)
+outputs*/
+result*/
+results*/
+logs*/
+analysis/reports/
+
+# Logs
+*.log
+logs/*
+
+# Misc
+*.bak
+
+# Data files
+data_files/images/*
+data_files/videos/*
+data_files/*_metadata.jsonl
+
+# Example-driven data: only the uri-only seed files are tracked; the hydrated
+# pools / test sets (and their downloaded media) are regenerated locally.
+data_files/example_driven/example_pools/*.jsonl
+!data_files/example_driven/example_pools/*_uri.jsonl
+data_files/example_driven/contextual_test_sets/*.jsonl
+!data_files/example_driven/contextual_test_sets/*_uri.jsonl
+data_files/example_driven/**/images/
+data_files/example_driven/**/videos/
+
+# Hugging Face Hub snapshot cache (created by utils/fetch_hf_dataset.py)
+/.cache/
+data_files/.cache/

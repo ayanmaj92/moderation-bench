@@ -1,0 +1,32 @@
+# Core ML — versions from tested environment
+vllm==0.19.1
+mistral-common==1.11.0
+transformers==5.6.2
+
+# Vision / media
+Pillow
+opencv-python
+decord
+
+# NLP / embeddings
+sentence-transformers
+
+# Data science
+scikit-learn
+scipy
+pandas
+matplotlib
+seaborn
+
+# Notebooks
+jupyter
+ipykernel
+nbformat
+ipywidgets
+
+# Utilities
+numpy
+tqdm
+pyyaml
+faiss-cpu
+openpyxl

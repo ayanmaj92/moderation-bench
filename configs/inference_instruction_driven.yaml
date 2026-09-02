@@ -1,0 +1,28 @@
+output_dir: "outputs_instruction-driven/"
+
+dataset:
+  name: "bluesky_final"
+  test_path: "/path/to/datafile"
+  batch_size: 50
+  posts_with_video: false
+
+model:
+  name: "gemma4_thinking"
+  size: "31B"
+  device: "cuda:0"
+  max_model_len: 32768
+  gpu_memory_utilization: 0.95
+  tensor_parallel_size: 1
+  inference:
+    resize_images: false
+    max_new_tokens: 8192
+    temperature: 0.0
+    top_p: 1.0
+  media_options:
+    num_frames: 16
+
+prompt:
+  type: "instruction_driven"
+  mode: "with_labels_rationale_details"
+  platform: "bluesky"
+  output_confidence: true

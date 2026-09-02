@@ -1,0 +1,43 @@
+output_dir: "outputs_example-driven/"
+
+dataset:
+  name: "bluesky_consolidated"
+  test_path: "/path/to/query_set.jsonl"   # any *_metadata.jsonl works; same file the instruction-driven runs use
+  neighbors_path: ""   # REQUIRED for -ics contextual: JSONL of {uri, neighbors_per_label}, joined to test_path by uri
+  safe_path: ""   # falls back to data_files/example_driven/example_pools/examples_prototypical_safe.jsonl if unset
+  loader: "full"
+  batch_size: 10
+  posts_with_video: true
+  group_batch_size: 5   # only used when prompt.example_per_group is true
+
+model:
+  name: "gemma4_thinking"
+  size: "31B"
+  device: "cuda:0"
+  max_model_len: 32768
+  gpu_memory_utilization: 0.95
+  tensor_parallel_size: 1
+  inference:
+    resize_images: false
+    max_new_tokens: 100
+    temperature: 0.0
+    top_p: 1.0
+  media_options:
+    num_frames: 16
+
+prompt:
+  type: "example_driven"
+  mode: "with_labels"
+  platform: "bluesky"
+  output_confidence: true
+  use_safe_examples: true
+  in_context_select: "random"   # options: random, prototypical, contextual
+  in_context_num: 10
+  # if true, splits example-driven examples into in_context_num-sized
+  # chunks and runs one model call per chunk instead of one
+  # combined mega-prompt, aggregating via majority vote across
+  # chunks (falls back to the first chunk's own prediction on a
+  # tie) -- reduces the spurious analogy-matching that comes from
+  # cramming ~100 examples across all label categories into a
+  # single call
+  example_per_group: true

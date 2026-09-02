@@ -1,0 +1,6 @@
+{
+  "moderated": "outputs_instruction-driven/moderated",
+  "near-moderated": "outputs_instruction-driven/near-moderated",
+  "random": "outputs_instruction-driven/random",
+  "safe": "outputs_instruction-driven/safe"
+}
