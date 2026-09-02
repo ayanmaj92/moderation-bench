@@ -58,7 +58,7 @@ Set the code env and run `bash scripts/get_data_files.sh`. This fetches each pos
 All downstream scripts read `data_files/<subset>_metadata.jsonl` and must be run **from the repo root** so the relative `data_files/...` media paths resolve.
 
 
-#### Option A — pre-fetched dataset from Hugging Face (complete; gated access)
+#### Option B — pre-fetched dataset from Hugging Face (complete; gated access)
 
 The full benchmark (post content + all images/videos, including posts since deleted from Bluesky) is released as a **gated** dataset, [`ayanmaj/ModerationBench-4K`](https://huggingface.co/datasets/ayanmaj/ModerationBench-4K).
 
