@@ -415,10 +415,10 @@ If you use ModerationBench, please cite our paper:
   title         = {Can Foundation Models Moderate Online Content? Evaluating Instruction- vs. Example-Driven Policy Operationalization},
   author        = {Ayan Majumdar and Shounak Paul and Pushpdeep Singh and Ines Abdelaziz and Sayeh Jarollahi and Seungeon Lee and Krishna P. Gummadi and Ingmar Weber and Abhisek Dash},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
+  eprint        = {2609.10410},
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
-  url           = {https://arxiv.org/abs/XXXX.XXXXX}
+  url           = {https://arxiv.org/abs/2609.10410}
 }
 ```
 
@@ -426,7 +426,7 @@ If you use ModerationBench, please cite our paper:
 
 ## Contact
 
-For any queries and access request for pre-fetched data, contact `ayanm[at]protonmail.com` or `psingh[at]mpi-sws.org`.
+For any queries, contact `ayanm[at]protonmail.com` or `psingh[at]mpi-sws.org`.
 
 ---
 
